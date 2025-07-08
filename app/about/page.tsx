@@ -1,11 +1,9 @@
 import AppBar from "@/components/appbar/Appbar";
 
 export default async function page() {
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY!;
-    const channelId = process.env.NEXT_PUBLIC_CHANNEL_ID!;
 
     const res = await fetch(
-        `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelId}&key=${apiKey}`,
+        `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${process.env.CHANNEL_ID!}&key=${process.env.API_KEY}`,
         {
             next: { revalidate: 3600 }, // Cache for 1 hour
         }

@@ -2,15 +2,10 @@ import AppBar from '@/components/appbar/Appbar'
 import React from 'react'
 import VideoPage from './videoFetch';
 
-type Props = {}
-
-export default async function page({ }: Props) {
-
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY!;
-    const channelId = process.env.NEXT_PUBLIC_CHANNEL_ID!;
+export default async function page() {
 
     const res = await fetch(
-        `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelId}&key=${apiKey}`,
+        `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${process.env.CHANNEL_ID!}&key=${process.env.API_KEY!}`,
         {
             next: { revalidate: 3600 },
         }

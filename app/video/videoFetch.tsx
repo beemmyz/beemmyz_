@@ -10,7 +10,7 @@ interface Props {
 
 async function getVideos() {
     const res = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_API_KEY}&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&part=snippet,id&order=date&maxResults=50`,
+        `https://www.googleapis.com/youtube/v3/search?key=${process.env.API_KEY}&channelId=${process.env.CHANNEL_ID}&part=snippet,id&order=date&maxResults=50`,
         { next: { revalidate: 3600 } }
     );
     const data = await res.json();
