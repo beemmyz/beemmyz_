@@ -1,6 +1,6 @@
 import AppBar from "@/components/appbar/Appbar";
 
-export default async function Home() {
+export default async function page() {
     const apiKey = process.env.NEXT_PUBLIC_API_KEY!;
     const channelId = process.env.NEXT_PUBLIC_CHANNEL_ID!;
 
