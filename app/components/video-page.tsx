@@ -2,7 +2,7 @@ import Thumbs from "./Thumbs";
 
 async function getLatestVideo() {
     const res = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?key=${process.env.API_KEY}&channelId=${process.env.CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`,
+        `https://www.googleapis.com/youtube/v3/search?key=${process.env._API_KEY}&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`,
         { next: { revalidate: 3600 } } // ISR 1 ชม.
     );
     const data = await res.json();
@@ -17,7 +17,7 @@ async function getLatestVideo() {
     const videoId = filtered.id.videoId;
 
     const detailRes = await fetch(
-        `https://www.googleapis.com/youtube/v3/videos?key=${process.env.API_KEY}&id=${videoId}&part=liveStreamingDetails,contentDetails,snippet`,
+        `https://www.googleapis.com/youtube/v3/videos?key=${process.env.NEXT_PUBLIC_API_KEY}&id=${videoId}&part=liveStreamingDetails,contentDetails,snippet`,
         { next: { revalidate: 3600 } }
     );
     const detailData = await detailRes.json();
