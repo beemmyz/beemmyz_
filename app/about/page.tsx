@@ -1,8 +1,8 @@
 import AppBar from "@/components/appbar/Appbar";
 
 export default async function page() {
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY!;
-    const channelId = process.env.NEXT_PUBLIC_CHANNEL_ID!;
+    const apiKey = process.env.API_KEY!;
+    const channelId = process.env.CHANNEL_ID!;
 
     const res = await fetch(
         `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelId}&key=${apiKey}`,
