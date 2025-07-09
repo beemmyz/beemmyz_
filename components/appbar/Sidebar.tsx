@@ -8,7 +8,6 @@ import {
     CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { AnimatePresence, motion } from 'framer-motion';
-import { IoGrid } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { FaTv, FaVideo } from 'react-icons/fa6';
