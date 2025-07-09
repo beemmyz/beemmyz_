@@ -38,7 +38,7 @@ export default async function Home() {
         customUrl={profile.customUrl}
       />
       <VideoPage />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mt-45 md:mt-0">
 
         <WacthList />
 
