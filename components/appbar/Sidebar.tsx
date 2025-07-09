@@ -9,6 +9,10 @@ import {
 } from "@/components/ui/collapsible"
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoGrid } from 'react-icons/io5';
+import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
+import { FaTv, FaVideo } from 'react-icons/fa6';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 type NavItemProps = {
     title: string;
@@ -25,17 +29,42 @@ type SubNavItemProps = {
     title: string;
 };
 
-export default function Sidebar() {
+type Props = {
+    title: string;
+    avatar: string;
+    description: string;
+    subscriberCount: number;
+    customUrl: string; // URL ที่ใช้สำหรับ Subscribe
+};
+
+export default function Sidebar({customUrl}: Props) {
+
+    const { t } = useTranslation('components')
 
     return (
         <aside className="h-screen overflow-hidden">
             <div className="space-y-4">
-                <NavItem title="Home" icon={<Home size={20} />} />
-                <CollapsibleNav title="Content" icon={<IoGrid size={20} />}>
+                <Link href={'/'}>
+                    <NavItem title={t('NAV_HOME')} icon={<Home size={20} />} />
+                </Link>
+
+                <Link href={'/video'}>
+                    <NavItem title={t('NAV_VIDEOS')} icon={<FaVideo size={20} />} />
+
+                </Link>
+                <Link href={`https://www.youtube.com/${customUrl}`}>
+                    <NavItem title={t('NAV_CH')} icon={<FaTv size={20} />} />
+
+                </Link>
+                <Link href={'/about'}>
+                    <NavItem title={t('NAV_ABOUT')} icon={<FaRegUserCircle size={20} />} />
+
+                </Link>
+                {/* <CollapsibleNav title="Content" icon={<IoGrid size={20} />}>
                     <SubNavItem title="Vidoes" />
                     <SubNavItem title="Shorts" />
                     <SubNavItem title="Streaming" />
-                </CollapsibleNav>
+                </CollapsibleNav> */}
                 {/* <CollapsibleNav title="About" icon={<IoDocuments size={20} />}>
                     <SubNavItem title="Profile" />
                     <SubNavItem title="Security" />

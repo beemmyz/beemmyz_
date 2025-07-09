@@ -70,14 +70,14 @@ const AppBar = ({ title, avatar, description, subscriberCount, customUrl }: Prop
                                             fontSize: '12px', display: 'inline-block', fontFamily: 'Prompt', marginLeft: '10px'
 
                                         }}>
-                                         {t('SUB')}
+                                        {t('SUB')}
 
                                         <CountUp
                                             style={{ fontSize: '12px', display: 'inline-block', fontFamily: 'Prompt', margin: '5px' }}
                                             end={subscriberCount}
                                         />
 
-                                         {t('PEO')}
+                                        {t('PEO')}
                                     </p>
 
                                 </div>
@@ -94,7 +94,7 @@ const AppBar = ({ title, avatar, description, subscriberCount, customUrl }: Prop
                             <div className="flex items-center justify-end gap-4">
                                 <Link href={`https://www.youtube.com/${customUrl}?sub_confirmation=1`}>
                                     <Button className="w-full">
-                                         {t('SUB_BTN')} <FaYoutube className="ml-2" />
+                                        {t('SUB_BTN')} <FaYoutube className="ml-2" />
                                     </Button>
                                 </Link>
 
@@ -165,14 +165,14 @@ const AppBar = ({ title, avatar, description, subscriberCount, customUrl }: Prop
                                                     fontSize: '12px', display: 'inline-block', fontFamily: 'Prompt', marginLeft: '10px'
 
                                                 }}>
-                                                 {t('SUB')}
+                                                {t('SUB')}
 
                                                 <CountUp
                                                     style={{ fontSize: '12px', display: 'inline-block', fontFamily: 'Prompt', margin: '5px' }}
                                                     end={subscriberCount}
                                                 />
 
-                                                 {t('PEO')}
+                                                {t('PEO')}
                                             </p>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@ const AppBar = ({ title, avatar, description, subscriberCount, customUrl }: Prop
                                 </div>
 
                                 <div>
-                                    <Sidebar />
+                                    <Sidebar title={title} avatar={avatar} description={description} subscriberCount={subscriberCount} customUrl={customUrl} />
                                 </div>
                             </div>
                         </motion.div>
