@@ -6,6 +6,46 @@ Perfect for use as a personal website or as a reference for learning modern fron
 
 ---
 
+☁️ Deploy to Vercel (Recommended)
+
+If you want to host this website on Vercel (recommended for Next.js), follow these steps:
+
+1. **Fork this Repository**
+
+`📌 Do not clone directly if you intend to deploy on Vercel. Forking ensures that you have your own copy to connect with Vercel.`
+
+Click the **Fork button** on the top-right of this repository
+
+This will create a copy under your GitHub account
+
+2. **Import into Vercel**
+
+Go to https://vercel.com/import
+
+Choose "Import Git Repository"
+
+Select your forked repo (e.g. your-username/toramaru)
+
+Set up the project as follows:
+
+Framework: Next.js (Vercel will auto-detect)
+
+Environment Variables:
+
+API_KEY → your YouTube API key
+
+CHANNEL_ID → your YouTube channel ID
+
+3. **Deploy**
+
+Click Deploy
+
+Your website will be live in seconds at a Vercel-provided domain (you can later add a custom domain)
+
+✅ You do not need to build or export manually — Vercel will handle everything from install to build to deploy.
+
+---
+
 ## 📌 Please Read First
 
 This project was created for **personal use and to share with friends or developers who want to learn**.  
