@@ -18,7 +18,7 @@ This project was created for **personal use and to share with friends or develop
 
 ## 🚀 Features
 
-- ✅ Built with ![NestJS](https://img.shields.io/badge/-NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+- ✅ Built with ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 - ✅ Uses Yarn as a package manager
 - ✅ Responsive design for mobile, tablet, and desktop
 
