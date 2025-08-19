@@ -7,8 +7,8 @@ import { Prompt } from 'next/font/google'
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export const metadata: Metadata = {
-  title: "toramaru",
-  description: "toramaru website",
+  title: "beemmyz",
+  description: "beemmyz website",
 };
 const prompt = Prompt({
   subsets: ['thai',"latin"],
